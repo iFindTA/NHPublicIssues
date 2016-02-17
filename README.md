@@ -171,7 +171,7 @@ ctrl＋D结束
 
 用法：
 cycript的用法上主要是注入你关注的那个应用的线程，然后就可以获得app，获得window，慢慢去获得viewController，逐步逐步拨开UI的面纱，这个在学习经典应用的UI时真的是无上的利器！
-1- 打开设备（越狱）运行相关app，以xxx为例
+1- 打开设备（越狱）运行相关app，以GSLC为例
 2- 打开终端SSH登录设备，执行：
 iPhone5s:/ root# ps aux | grep GSLC
 得到如下：
@@ -182,3 +182,25 @@ cycript -p 479
 如果出现cy# 说明依附成功，可依据相关语法追踪、控制了。
 UIApp是默认命令，变量赋值可采取KVC方式
 ```
+
+##### **Class-dump-z相关**
+```
+[安装](http://itony.me/200.html)：
+class-dump大概有三个版本（它们之间的区别和详细介绍在此），我们[直接下载class-dump-z 0.2a](https://code.google.com/archive/p/networkpx/wikis/class_dump_z.wiki)，解压后将mac_x86目录中的class-dump-z程序文件拷贝至/usr/local/bin目录。这样就算安装完成啦。
+使用：以GSLC为例
+使用iFunBox进入到程序GSLC.app文件内,可以看到有个相同名字的文件，这个就是编译之后的主程序，拷贝到桌面，打开终端，进入桌面，执行：
+class-dump-z GSLC
+可以看到输出了一大推信息，不过都是加密的，所以需要解密，会使用到工具Clutch。
+Clutch的安装：
+首先越狱机器已经准备好了，使用Cydia搜索并安装Clutch（注：现在Cydia已经下载不到了，需要我们自己下载程序后通过sftp复制到真机，[Clutch下载地址](https://github.com/KJCracks/Clutch/releases)）
+1- 打开设备下载终端Terminal和iFile
+2- ssh到设备 sftp上传Clutch文件，ifile打到usr/bin/clutch这个文件修改权限，把用户、组、全局权限的前三项全打钩
+3- 打开 MobileTerminal 输入“su”，此时提示要输入密码(默认“alpine”)
+4- 按照Clutch git上的指引，输入 Clutch -i,可看到行交替颜色的程序出现，假如GSLC序号为3，还有bundleid:com.xxx.xxx
+5- 执行：Clutch -d com.xxx.xxx即可生成解密的ipa文件，根据路径找到它并拷贝到桌面
+6- 再次执行 class-dump-z GSLC 就可以看到你想要的！
+至此你已经可以查看到你想看的App的头文件声明了！
+
+```
+
+##### ****
