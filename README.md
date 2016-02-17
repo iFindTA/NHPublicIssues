@@ -146,3 +146,13 @@ int main(int argc, charchar *argv[])
     }  
 }  
 ```
+##### **简单的防止系统键盘缓存方法**
+```
+UITextFiled *textFiled = [[UITextField alloc]initWithFrame:frame];
+textFiled.autocorrectionType = UITextAutocorrectionTypeNo
+```
+##### **Cycript运行时工具的简单使用**
+```
+安装：
+[官方网站](https://cycript.org)
+```
