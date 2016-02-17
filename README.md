@@ -154,5 +154,31 @@ textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 ##### **Cycript运行时工具的简单使用**
 ```
 安装：
-[官方网站](https://cycript.com)
+[官方网站](https://cycript.org/)下载完之后是framework，可以使用在仅使用在自己的应用里，在非越狱设备上可以hook自己的应用进程有相应的[介绍](http://lldong.github.io/2014/03/03/embed-cycript-into-your-app-for-debugging.html),不再赘述
+[文件下载](http://www.cycript.org/debs/)后的越狱[安装方式](http://blog.csdn.net/sakulafly/article/details/29633627)：
+1- 使用cydia安装openSSH确保可以登录到越狱设备,使用SFTP上传下载好的cycript_0.9.501_iphoneos-arm.deb和libffi_1-3.0.10-5_iphoneos-arm.deb安装包到iOS设备上
+2- sftp root@IP输入后会要求输入password（默认alpine），链接成功后执行：
+sftp> put cycript_0.9.501_iphoneos-arm.deb完成后，同样方式上传另一个文件，ctrl＋d结束。
+3- 使用dpkg -i 安装：
+ssh root@IP登录，查看是否上传成功，执行：
+ls
+dpkg -i cycript_0.9.501_iphoneos-arm.deb
+同样安装另一个文件 
+结束安装
+4- 运行cycript 如果出现cy＃符号说明成功：
+cycrypt
+ctrl＋D结束
+
+用法：
+cycript的用法上主要是注入你关注的那个应用的线程，然后就可以获得app，获得window，慢慢去获得viewController，逐步逐步拨开UI的面纱，这个在学习经典应用的UI时真的是无上的利器！
+1- 打开设备（越狱）运行相关app，以xxx为例
+2- 打开终端SSH登录设备，执行：
+iPhone5s:/ root# ps aux | grep GSLC
+得到如下：
+mobile     479   0.6  4.3   590776  44956   ??  Ss    5:14PM   0:09.58 /var/mobile/Applications/8723004E-9E54-4B37-856D-86292780E958/GSLC.app/GSLC  
+root       497   0.0  0.0   329252    176 s000  R+    5:21PM   0:00.00 grep GSLC 
+其中479即为进程号，接着：
+cycript -p 479 
+如果出现cy# 说明依附成功，可依据相关语法追踪、控制了。
+UIApp是默认命令，变量赋值可采取KVC方式
 ```
