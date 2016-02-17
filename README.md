@@ -192,15 +192,15 @@ class-dump大概有三个版本（它们之间的区别和详细介绍在此）�
 class-dump-z GSLC
 可以看到输出了一大推信息，不过都是加密的，所以需要解密，会使用到工具Clutch。
 Clutch的安装：
-首先越狱机器已经准备好了，使用Cydia搜索并安装Clutch（注：现在Cydia已经下载不到了，需要我们自己下载程序后通过sftp复制到真机，[Clutch下载地址](https://github.com/KJCracks/Clutch/releases)）
-1- 打开设备下载终端Terminal和iFile
+首先越狱机器已经准备好了，使用Cydia搜索并安装Clutch（注：现在Cydia已经下载不到了，需要我们自己下载程序后通过sftp上传到设备，[Clutch下载地址](https://github.com/KJCracks/Clutch/releases)）
+1- 打开设备Cydia下载终端Terminal和iFile
 2- ssh到设备 sftp上传Clutch文件，ifile打到usr/bin/clutch这个文件修改权限，把用户、组、全局权限的前三项全打钩
 3- 打开 MobileTerminal 输入“su”，此时提示要输入密码(默认“alpine”)
 4- 按照Clutch git上的指引，输入 Clutch -i,可看到行交替颜色的程序出现，假如GSLC序号为3，还有bundleid:com.xxx.xxx
 5- 执行：Clutch -d com.xxx.xxx即可生成解密的ipa文件，根据路径找到它并拷贝到桌面
 6- 再次执行 class-dump-z GSLC 就可以看到你想要的！
-至此你已经可以查看到你想看的App的头文件声明了！
 
+至此你已经可以查看到你想看的App的头文件声明了！
 ```
 
 ##### ****
