@@ -146,11 +146,7 @@ int main(int argc, charchar *argv[])
     }  
 }  
 ```
-##### **简单的防止系统键盘缓存方法**
-```
-UITextFiled *textFiled = [[UITextField alloc]initWithFrame:frame];
-textFiled.autocorrectionType = UITextAutocorrectionTypeNo
-```
+
 ##### **Cycript运行时工具的简单使用**
 ```
 安装：
@@ -201,6 +197,11 @@ Clutch的安装：
 6- 再次执行 class-dump-z GSLC 就可以看到你想要的！
 
 至此你已经可以查看到你想看的App的头文件声明了！
+```
+##### **简单的防止系统键盘缓存方法**
+```
+UITextFiled *textFiled = [[UITextField alloc]initWithFrame:frame];
+textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 ```
 
 ##### ****
