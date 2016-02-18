@@ -204,4 +204,11 @@ UITextFiled *textFiled = [[UITextField alloc]initWithFrame:frame];
 textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 ```
 
-##### ****
+##### **Python Flask全局安装（非virtualenv）**
+```
+shell环境下pip管理安装，执行shell：
+sudo easy_install pip
+安装好之后再安装Flask，执行shell：
+sudo pip install flask
+即可
+```
