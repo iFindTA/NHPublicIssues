@@ -9,6 +9,14 @@
 3、右键证书简介，信任里面选择始终信任；
 4、重启Xcode(最彻底的重启电脑).
 ```
+##### **真机测试报错：The identity used to sign the executable is no longer valid.**
+Please verify that your device’s clock is properly set, and that your signing certificate is not expired.
+```
+1、restart Xcode if not working then continue；
+2、Go to Accounts in Xcode (in preferences), Details for developer account then clicking the refresh icon at lower left；
+3、if there were not refresh icon then delete the team provisioning profile who was dulplicate or delete all team provisioning profile and download them for new.
+```
+
 ~关于数据、程序安全的相关考虑，网上有相关资料，这里仅作筛选整理~
 ##### **static和被裁的符号表**
 ```
