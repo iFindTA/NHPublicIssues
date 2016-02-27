@@ -1,7 +1,6 @@
 #!/bin/bash
 declare -x DEV="ACKApi.o"
 declare -x TAG="something.o"
-
 declare -x SDK="libACKSDK.a"
 
 # deal with platform armv7 
