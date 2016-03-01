@@ -17,6 +17,11 @@ Please verify that your device’s clock is properly set, and that your signing 
 3、if there were not refresh icon then delete the team provisioning profile who was dulplicate or delete all team provisioning profile and download them for new.
 ```
 
+##### **Xcode编译时注意strip**
+```
+build setting->strip->
+```
+
 ~关于数据、程序安全的相关考虑，网上有相关资料，这里仅作筛选整理~
 ##### **static和被裁的符号表**
 ```
