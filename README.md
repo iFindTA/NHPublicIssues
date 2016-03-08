@@ -225,3 +225,14 @@ sudo easy_install pip
 sudo pip install flask
 即可
 ```
+
+##### **开发中常配置的命令**
+```
+1，homebrew 用于管理其他安装包
+2，cocoaPods 
+3，curl 模拟网络请求
+4，cycript class-dump-z
+5，ideviceinstaller／usb／plist／mobiledevice
+6，rar
+7，shenzhen ipa command
+```
