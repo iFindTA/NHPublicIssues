@@ -235,4 +235,5 @@ sudo pip install flask
 5，ideviceinstaller／usb／plist／mobiledevice
 6，rar
 7，shenzhen ipa command
+8，pip management Python‘s packages
 ```
