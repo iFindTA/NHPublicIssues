@@ -217,6 +217,16 @@ UITextFiled *textFiled = [[UITextField alloc]initWithFrame:frame];
 textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 ```
 
+##### **应用进入后台的时候应该清除剪贴板**
+```ObjectiveC
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+[UIPasteboard generalPasteboard].items = nil;
+}
+```
+
 ##### **Python Flask全局安装（非virtualenv）**
 ```
 shell环境下pip管理安装，执行shell：
@@ -236,4 +246,5 @@ sudo pip install flask
 6，rar
 7，shenzhen ipa command
 8，pip management Python‘s packages
+9,snoop-it 追踪方法调用（阻止依附）
 ```
