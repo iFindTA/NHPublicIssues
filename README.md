@@ -227,6 +227,11 @@ textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 }
 ```
 
+##### **图片格式的选择**
+```
+真对上行下行中图片资源文件较多的情况可以采取webp格式去传输。
+```
+
 ##### **Python Flask全局安装（非virtualenv）**
 ```
 shell环境下pip管理安装，执行shell：
