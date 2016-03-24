@@ -227,6 +227,11 @@ textFiled.autocorrectionType = UITextAutocorrectionTypeNo
 }
 ```
 
+##### **JSPatch、ReactNative使用注意点**
+```
+由于JS具有很高的执行权限，所以要注意验证签名，防止恶意加载
+```
+
 ##### **图片格式的选择**
 ```
 真对上行下行中图片资源文件较多的情况可以采取webp格式去传输。
