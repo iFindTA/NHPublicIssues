@@ -260,7 +260,12 @@ sudo pip install flask
 ```
 
 ```
-[self.navigationController.navigationBar setHidden:YES];<--doesn't remove pop gesture
+[self.navigationController.navigationBar setHidden:YES];--doesn't remove pop gesture
 
-[self.navigationController setNavigationBarHidden:YES];<-- disables pop gesture
+[self.navigationController setNavigationBarHidden:YES];-- disables pop gesture
+```
+
+##### **同一布局页面从不通Navigation push高度不一致**
+```
+注意不通UINavigationBar的translucent属性是否设置一致
 ```
