@@ -258,3 +258,9 @@ sudo pip install flask
 8，pip management Python‘s packages
 9,snoop-it 追踪方法调用（阻止依附）
 ```
+
+```
+[self.navigationController.navigationBar setHidden:YES];<--doesn't remove pop gesture
+
+[self.navigationController setNavigationBarHidden:YES];<-- disables pop gesture
+```
