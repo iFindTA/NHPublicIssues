@@ -193,6 +193,21 @@ UIApp是默认命令，变量赋值可采取KVC方式
 Tips:如果报错（MS:Error: _krncall(task_for_pid(self, pid, &task)) =5）挂钩进程名字即可成功
 ```
 
+```
+function printsMethod(m){
+	var count = new new Type("I");
+    var methods = class_copyMethodList(objc_getClass(m),count);
+    var methodsArr = [];
+    for(var i = 0;i < *count;i++){
+    	var method = methods[i];
+ methodsArr.push({selector:method_getName(method),imp:method_getImplementation(method)});
+    }
+    free(methods);
+    free(count);
+	return methodsArr;
+}
+```
+
 ##### **Class-dump-z相关**
 ```
 [安装](http://itony.me/200.html)：
