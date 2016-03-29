@@ -190,6 +190,7 @@ root       497   0.0  0.0   329252    176 s000  R+    5:21PM   0:00.00 grep GSLC
 cycript -p 479 
 如果出现cy# 说明依附成功，可依据相关语法追踪、控制了。
 UIApp是默认命令，变量赋值可采取KVC方式
+Tips:如果报错（MS:Error: _krncall(task_for_pid(self, pid, &task)) =5）挂钩进程名字即可成功
 ```
 
 ##### **Class-dump-z相关**
