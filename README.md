@@ -20,7 +20,14 @@ Please verify that your device’s clock is properly set, and that your signing 
 ##### **ld: library not found for -lPods**
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
-project navi->framework-delete lib-Pods.a
+project navigation->framework-delete lib-Pods.a(if its color is red)
+```
+
+##### **library not found for -lPods-AFNetworking**
+```
+1.Go to project setting -> build setting -> other linker flag, and remove all flags that have -lpod or frameworks or related to pods. Don't remove the required flags (e.g. -ObjC, -licucore, -libxml2)
+2.Add a flag $(inherited) at the top.
+3.Clean the project and compile.
 ```
 
 ##### **lPods某一类库 报Undefined symbols for architecture armv7:**
