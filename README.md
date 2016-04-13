@@ -17,6 +17,12 @@ Please verify that your device’s clock is properly set, and that your signing 
 3、if there were not refresh icon then delete the team provisioning profile who was dulplicate or delete all team provisioning profile and download them for new.
 ```
 
+##### **ld: library not found for -lPods**
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+project navi->framework-delete lib-Pods.a
+```
+
 ##### **Xcode编译时注意strip**
 ```
 build setting->strip->
