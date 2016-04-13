@@ -23,6 +23,12 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 project navi->framework-delete lib-Pods.a
 ```
 
+##### **lPods某一类库 报Undefined symbols for architecture armv7:**
+```
+＊原因：很有可能你在开发时选中的编译版本为arm64或其他非armv7平台
+＊解决：在project navigation界面选中pod project，build setting里的Valid Architectures 增加你要的版本 then clean&&build即可
+```
+
 ##### **Xcode编译时注意strip**
 ```
 build setting->strip->
