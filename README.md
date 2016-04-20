@@ -291,7 +291,14 @@ sudo pip install flask
 6，rar
 7，shenzhen ipa command
 8，pip management Python‘s packages
-9,snoop-it 追踪方法调用（阻止依附）
+9，snoop-it 追踪方法调用（阻止依附）
+```
+
+##### **开发中可公用的类或方法**
+```
+1，设置页面可以模版提取
+2，搜索页面可以模版提取
+3，登录、注册、找回登录（交易密码）页面可以模版提取
 ```
 
 ```
