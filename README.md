@@ -301,13 +301,18 @@ sudo pip install flask
 3，登录、注册、找回登录（交易密码）页面可以模版提取
 ```
 
-```
-[self.navigationController.navigationBar setHidden:YES];--doesn't remove pop gesture
+```ObjectiveC
+	[self.navigationController.navigationBar setHidden:YES];//--doesn't remove pop gesture
 
-[self.navigationController setNavigationBarHidden:YES];-- disables pop gesture
+	[self.navigationController setNavigationBarHidden:YES];//-- disables pop gesture
 ```
 
 ##### **同一布局页面从不通Navigation push高度不一致**
 ```
 注意不通UINavigationBar的translucent属性是否设置一致
+```
+
+##### **检测IDFA**
+```
+	grep -r advertisingIdentifier .
 ```
