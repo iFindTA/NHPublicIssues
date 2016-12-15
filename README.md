@@ -281,17 +281,28 @@ sudo pip install flask
 即可
 ```
 
-##### **开发中常配置的命令**
+##### **Development Commands**
 ```
 1，homebrew 用于管理其他安装包
 2，cocoaPods 
 3，curl 模拟网络请求
 4，cycript class-dump-z
 5，ideviceinstaller／usb／plist／mobiledevice
-6，rar
+6，rar（homebrew）
 7，shenzhen ipa command
 8，pip management Python‘s packages
 9，snoop-it 追踪方法调用（阻止依附）
+10，Jenkins CI（homebrew）
+```
+
+##### **Development Kit Sets**
+```
+1,Xcode
+2,Android Studio
+3,Google:Chrome,PostMan,WireShark,Thunder [ShadowSocks](https://portal.shadowsocks.com/clientarea.php)
+4,GitHub Desktop,SourceTree,Sublime Text,Haroopad
+5,Xmind,Axure RP,Sketch Gif Brewery
+6,Window Offices
 ```
 
 ##### **开发中可公用的类或方法**
@@ -315,4 +326,22 @@ sudo pip install flask
 ##### **检测IDFA**
 ```
 	grep -r advertisingIdentifier .
+```
+
+##### **CocoaPods Issues**
+```
+1,rm ~/Library/Caches/CocoaPods/search_index.json
+```
+
+###### **Dev Tips**
+```
+1,sqlite insert failed:
+	a>,field declared to non-null but insert value was nil!
+2,zh_hans white placeholder :\u3000
+3,[NSThread sleepForTimeInterval:]; whatever u should must be careful to use it!cause of it will block all tread include the main thread! if neccesory to use, just follow down:
+dispatch_queue_t queue = dispatch_queue_create(“com.thread.queue”, NULL);
+dispatch_async(queue, ^{
+	[NSThread sleepForTimeInterval:];
+	//TODO: something
+});
 ```
