@@ -300,7 +300,7 @@ sudo pip install flask
 1,Xcode
 2,Android Studio
 3,Google:Chrome,PostMan,WireShark,Thunder [ShadowSocks](https://portal.shadowsocks.com/clientarea.php)
-4,GitHub Desktop,SourceTree,Sublime Text,Haroopad
+4,GitHub Desktop,SourceTree,Sublime Text,Haroopad/MacDown
 5,Xmind,Axure RP,Sketch Gif Brewery
 6,Window Offices
 ```
