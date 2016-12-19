@@ -345,3 +345,10 @@ dispatch_async(queue, ^{
 	//TODO: something
 });
 ```
+
+###### **UI/WK webView not display table line**
+```HTML
+<table border="0" cellpadding="0" cellspacing="0" width="567"
+style="border-collapse: collapse;width:426pt">
+modify to:style="border-collapse: seperate"(标准Html语法)
+```
